@@ -12,6 +12,7 @@ OUTPUT_PATH = Path("/output/entry.txt")
 
 
 def main() -> None:
+    assert 1 <= len(ENTRY) <= 160, "entry must be 1-160 characters"
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(ENTRY, encoding="utf-8")
 
